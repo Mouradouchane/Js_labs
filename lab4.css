@@ -1,0 +1,31 @@
+section #tlt{
+    position: relative;
+    display: block;
+}
+section #code {
+    position: relative !important;
+    background :rgba(31, 30, 30, 0.918);
+    color :white !important;
+    font-size: 1rem;
+    font-family: monospace;
+    padding: 1rem !important;
+    border-radius: 4px !important;
+    display: inline-block !important;
+    left: 8px !important;
+    width : 70%;
+    float : left;
+    /* margin-top: 2.5rem; */
+}
+
+section #BTNcopy{
+    position: relative;
+    background: rgb(103, 245, 103);
+    border-style: none;
+    font-family: monospace;
+    font-size: 1rem;
+    padding: 1rem;
+    cursor: pointer;
+    transition: 0.2s;
+    top: -0.5rem;
+    left: 0.2rem;
+}
