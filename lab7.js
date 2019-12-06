@@ -1,6 +1,8 @@
 
 function toHEX(dec = 0){
-
+    if(isNaN(dec)){
+        return "not a number";
+    }
     let arr = [];
     let temp = dec;
     let stop = false;
@@ -103,49 +105,92 @@ function toBIN(dec = 0){
 }
 
 function toOCT(dec = 0){
-    let BINvals = ["000","001","010","011","100","101","110","111"];
-    let temp = dec.toString().split("");
+    // 0
+    if(isNaN(dec)){
+        return "not a number";
+    }
+
+    // 1
+    let temp = dec;
     let OCT = [];
-    if(temp < 8){
-        let c = 0;
-        while(true){
-            if(temp == BINvals[c]){
-                OCT.push(BINvals[c]);
-                break;
+    let stop = false;
+
+    function writer(oct = [0]){
+        let OCTAL = oct.reduce((e,ev) => e = ""+e+ev);
+        return OCTAL;
+    }
+    while(true){
+        if(stop == true){
+            OCT.reverse();
+            return writer(OCT);
+        }
+        // 2
+        if(temp < 8){
+            OCT.push(temp);
+            stop = true;
+            OCT.reverse();
+            return writer(OCT);
+        }
+        else {
+            //3
+            if((temp%8) == 0){
+                OCT.push(0);
+                temp = Math.floor(temp/8);
             }
-            c+=1;
+            else if((temp%8) != 0){
+                // 4
+                let val = (temp/8).toString().split(".");
+                let [, REMINDER] = val;
+                let REMI = Number.parseFloat("0."+ REMINDER) * 8;
+                OCT.push(REMI);
+                temp = Math.floor(temp/8);
+            }
         }
     }
-    else{
-        for(let i = 0 ; i < temp.length ; i += 1){
-        let bin = toBIN(Number.parseInt(temp[i]));
-        let c = 0;
-        while(true){
-            if(bin == BINvals[c]){
-                OCT.push(BINvals[c]);
-                break;
-            }
-            c+=1;
-        }
-    }
-}
-    return OCT;
 }
 
-// testing part
+// testing function 
 function tester(){
-    let randVAL = Math.floor(Math.random() * 25);
+    let randVAL = Math.floor(Math.random() * 2155);
+    let bothOCT = Number.parseInt((randVAL).toString(8));
+    let MyOCT = toOCT(randVAL);
 
-    let bothBIN  = Number.parseInt((randVAL).toString(2));
-    let MyBIN = toBIN(randVAL);
-
-    if(MyBIN != bothBIN){
+    if(MyOCT != bothOCT){
         mistake +=1;
         console.warn("mistake : " + mistake);
     }
-    console.log(`MyBIN ${MyBIN}\t||\tbothBIN ${bothBIN}`);
+    console.log("\t value used is : " + randVAL);
+    console.log(`MyOCT ${MyOCT}\t||\tbothOCT ${bothOCT}`);
 }
 
-let mistake = 0;
+// let mistake = 0;
 // var interVal_test = setInterval(tester , 2000);
 
+const inp_lab7 = inps[3];
+const ARS_RSLT_lab7 = document.querySelectorAll(".valConvert_lab7");
+const [hexPlace_lab7,octPlace_lab7,binPlace_lab7] = ARS_RSLT_lab7;
+
+inp_lab7.onkeypress = (event) => {
+    let val = inp_lab7.value.trim();
+    function printERR(){
+        let err = "invalid input value because using a forbidden value like : {float number , NAN , keywords , spaces , empty} !";
+        hexPlace_lab7.textContent = err;
+        octPlace_lab7.textContent = err;
+        binPlace_lab7.textContent = err; 
+    }
+    // if user press enter
+    if(event.keyCode == 13){
+        // if empty or has space or has world 
+        if(val.length == 0 || Anti_SPACE_REGEXP.test(val) == true || Anti_Numbers_REGEXP.test(val) == true){
+            printERR();
+        }
+        else{
+            hexPlace_lab7.textContent = toHEX(val);
+            octPlace_lab7.textContent = toOCT(val);
+            binPlace_lab7.textContent = toBIN(val);
+        }   
+    }
+};
+
+const Anti_Numbers_REGEXP = new RegExp("(\[A-z]{1,})","i");
+const Anti_SPACE_REGEXP = new RegExp("( +)", "i");
