@@ -1,0 +1,39 @@
+
+#CSV{
+    position: relative !important;
+    display: inline-block;
+    right: 1rem;
+    top: -2.5rem;
+}
+#A2D{
+    position: relative !important;
+    display: inline-block;
+    right: 1rem;
+    left: 50%;
+    top: -2.5rem;
+}
+#csvContent{
+    position: relative !important;
+    width: 40%;
+    border-radius: 4px;
+    display: inline-block;
+    top : 4rem;
+    left: -9.8rem;
+}
+
+#convertedContent{
+    position: relative !important;
+    width: 40%;
+    border-radius: 4px;
+    border : 1px solid black;
+    float : right;
+    right: 1rem;
+    height: 4rem;
+    top : -1.8rem;
+}
+
+#BTNconv_lab5{
+    position: relative !important;
+    top: 6rem;
+    left: -26%;
+}

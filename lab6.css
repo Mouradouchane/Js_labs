@@ -1,0 +1,39 @@
+
+#hexaColorRSLT_lab6 {
+    position: relative;
+    width: 50%;
+    height: 8rem;
+    left: 8px;
+    background: #000000;
+    margin-top: -1rem;
+    border-radius: 8px;
+}
+
+#hedaColorCODERSLT_lab6{
+    position: relative;
+    font-family: monospace;
+    font-size: 1rem;
+    color : rgb(255, 255, 255);
+    background: rgb(37, 37, 37);
+    padding: 4px;
+    width: calc(50% - 8px);
+    left: 8px; 
+    display: block;
+    margin-top:8px;
+    border-radius: 8px;   
+}
+
+#generated_lab6{
+    position: relative;
+    margin-top: 8px;
+    left: 8px; 
+    background: hsl(160, 80%, 24%);
+    font-family: monospace;
+    color : white;
+    font-size: 1rem;
+    border-style: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+

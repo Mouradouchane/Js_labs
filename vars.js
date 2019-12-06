@@ -1,0 +1,1 @@
+const Sections = document.querySelectorAll("section");

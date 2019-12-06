@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>labs - javascript</title>
+    <!-- main style -->
+    <link type="text/css" rel="StyleSheet" href="./style.css"> </link>
+    <link rel="shortcut icon" href="./log.png"> </link>
+</head>
+<body>
+    <!-- lab 1 -->
+    <section>
+        <h2> # lab 1 - make a detected file format </h2>
+        <p> target file </p>
+        <input type="text" value="" class="inps" placeholder="target name">
+        <article class="outs"> ex : rar , iso , css </article>
+    </section>
+
+    <!-- lab 2 -->
+    <section>
+        <h2> # lab 2 - make a selected word in article </h2>
+        <p> article </p>
+        <input type="text" value="" class="inps" placeholder="keyword">
+        <textarea type="text" value="" class="inps" > </textarea>
+        <article class="outs"> ex : brad , tom , apple </article>
+    </section>
+
+    <!-- lab 3 -->
+    <section>
+        <h2> # lab 3 - rename docs in web </h2>
+        <p> add docs </p>
+        <button class="btns"> add docs </button>
+        <ul>
+      
+        </ul>
+        <div class="option-foucs"> </div> 
+
+        <div id="add_doc">
+            <p class="option-p"> doc type </p>
+            <select> 
+                <option class="opn" value="file"> file </option> 
+                <option class="opn" value="folder"> folder </option> 
+            </select>
+            <p class="option-p"> doc name </p>
+            <input type="text" class="option-inps" placeholder="doc name">
+            <button class="option-btn"> add </button> 
+            <button class="option-btn"> back </button>
+        </div>
+        <div id="edit_doc">
+            <p class="option-p"> doc type </p>
+            <select> 
+                <option class="opn" value="file"> file </option> 
+                <option class="opn" value="folder"> folder </option> 
+            </select>
+            <p class="option-p"> doc name </p>
+            <input type="text" class="option-inps" placeholder="new name">
+            <button class="option-btn"> save </button> 
+            <button class="option-btn"> back </button>
+        </div>
+
+    </section>
+
+    <!-- lab 4 -->
+    <section>
+        <h2> # lab 4 - make a copy a string to the clipboard </h2>
+        <p id="tlt"> example code </p>
+        <input id="code" type="text"> 
+        <button id="BTNcopy"> copy</button>
+        <article class="outs"> ready to use </article>
+    </section>
+
+    <!-- lab 5 -->
+    <section >
+        <h2> # lab 5 - make a CSV to  2D Array </h2>
+        <p id="CSV"> CSV </p> <p id="A2D"> 2D ARRAY </p>
+        <textarea id="csvContent" type="text"> </textarea>
+        <article id="convertedContent"> result </article>
+        <button id="BTNconv_lab5"> convert </button>
+    </section>
+
+    <!-- lab 6 -->
+    <section >
+        <h2> # lab 6 - make a generate random hexadecimal color code </h2>
+        <p> HEXA </p>
+        <div id="hexaColorRSLT_lab6"></div>
+        <span id="hedaColorCODERSLT_lab6"> defult #000000 </span>
+        <button id="generated_lab6"> generate </button>
+    </section>
+
+    <!-- lab 7 -->
+    <section id="lab7">
+        <h2> # lab 7 - make a Dec to hex to bin to oct </h2>
+        <p> Decimal </p>
+        <input type="text" placeholder="decimal number">
+        <br>
+        <p> Hexa </p>
+        <span class="valConvert_lab7"> Ex : #000000 </span>
+        <p> Octal </p>
+        <span class="valConvert_lab7"> Ex : 152 </span>
+        <p> Binary </p>
+        <span class="valConvert_lab7"> Ex : 1001010 </span>
+    </section>
+
+    <!-- vars js -->
+    <script src="vars.js" rel="module"> </script>
+    <!-- lab 1 -->
+    <script src="lab1.js" rel="module"> </script>
+    <!-- lab 2 -->
+    <script src="lab2.js" rel="module"> </script>
+    <!-- lab 3 -->
+    <script src="lab3.js" rel="module"> </script>
+    <!-- lab 4 -->
+    <script src="lab4.js" rel="module"> </script>
+    <!-- lab 5 -->
+    <script src="lab5.js" rel="module"> </script>
+    <!-- lab 6 -->
+    <script src="lab6.js" rel="module"> </script>
+    <!-- lab 7 -->
+    <script src="lab7.js" rel="module"> </script>
+</body>
+</html>

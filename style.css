@@ -1,0 +1,309 @@
+@import url('./lab4.css');
+@import url("./lab5.css");
+@import url("./lab6.css");
+@import url("./lab7.css");
+
+html{
+    --lightBack : rgb(218, 216, 216);
+}
+body{
+    background-color : var(--lightBack);
+}
+
+section{
+    position: relative;
+    border-radius: 10px;
+    box-shadow: 0px 0px 9px -1px #000000a6;
+    width: 80%;
+    overflow: hidden;
+    padding-bottom: 4px;
+    margin-top: 18px;
+}
+
+h2{
+    position: relative;
+    top: -0.5rem;
+    font-family: monospace;
+    font-weight: bold;
+    color :rgb(19, 19, 19);
+    background-color:rgb(134, 102, 129);
+    border-bottom: 4px solid rgb(72, 57, 70);
+    display: inline-block;
+    padding : 8px;
+    width : 90%;
+    border-radius: 0px 10px 10px 0px;
+    
+}
+
+p{
+    position:  relative;
+    margin-top: -1rem;
+    font-family: monospace;
+    color :rgb(19, 19, 19);
+    font-size: 1.5rem;
+    display: inline-block;
+    left: 8px;
+}
+
+input{
+    position: relative;
+    margin-top: -0.5rem;
+    float: right;
+    right:-1px;
+    border-radius: 10px 0px 0px 10px;
+    padding: 6px;
+    width: 10rem;
+    height: 1rem;
+    border: 1px solid black;
+}
+
+.outs{
+    position: relative;
+    bottom: -10px;
+    transform: translate(-50%,-0%);
+    left:50%;
+    font-size: 0.8rem;
+    font-family: monospace;
+    font-weight: bold;
+    color :rgb(19, 19, 19);
+    background-color:rgb(199, 198, 199);
+    padding : 8px;
+    width : 90%;
+    border-radius: 10px 10px 0px 0px;
+    text-align: center;
+    
+}
+
+textarea{
+    position: relative;
+    margin-top: -1rem;
+    left : 8px;
+    font-family: monospace;
+    font-size: 1rem;
+    width: calc(100% - 8px);
+    border : 1px solid black;
+    border-radius: 10px 0px 0px 10px;
+    padding: 4px;
+}
+
+.btns{
+    position: relative;
+    float: right;
+    right : 4rem;
+    background :#2f3f5e;
+    border-style: none;
+    color : white;
+    font-weight: bold;
+    font-family:  tahoma;
+    border-radius: 0.6rem;
+    padding: 0.5rem;
+    box-shadow: 0px 0px 8px 1px #333333c4;
+    cursor: pointer;
+    transition: 0.2s;
+}
+button:active{
+    transform: scale(0.9);
+}
+
+ul{
+    position: relative;
+    background: gray;
+    left: 8px;
+    width: 85%;
+    /*! left: 0%; */
+}
+
+li{
+    position: relative;
+    list-style: none;
+    color : white;
+    font-family: monoscape;
+    font-weight: bold;
+    transition: 0.2s;
+    left: -2.5rem;
+    border-bottom: 6px solid #2f3f5e;
+    margin: none;
+    /*! list-style-position: inside; */
+    width: calc(100% + 2.5rem);
+}
+li:active{
+    transform: scale(0.99);
+}
+li:hover{
+    background: rgba(255,255,255,0.2);
+    border-bottom: 6px solid tomato;
+}
+li img{
+    position:  relative;
+    width : 1rem;
+    top: 0.6em;
+    left: 4px;
+}
+li p {
+    position: relative;
+    font-size: 1rem;
+    top: 0.5rem;
+    color: white;
+    cursor: pointer;
+    font-family: monospace;
+}
+
+.del{
+    position: relative;
+    top: 0.3rem;
+    float: right;
+    right : 2rem;
+    margin-top:2px;
+    background :#2f3f5e;
+    border-style: none;
+    color : white;
+    font-weight: bold;
+    font-family:  tahoma;
+    border-radius: 0.2rem;
+    padding: 0.2rem;
+    cursor: pointer;
+    transition: 0.2s;
+    padding-left: 8px;
+    padding-right: 8px;
+    text-align: center;
+}
+
+#add_doc{
+    position: absolute;
+    width: 30%;
+    height: auto;
+    border-radius: 8px;
+    background: #222222eb;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    overflow: hidden;
+    display: none;
+}
+#add_doc .option-inps{
+    position: absolute;
+    display: block;
+    top: 2.5rem;
+    font-size: 1rem;
+    font-family: monoscape;
+    width: 4rem;
+    right: 0.9rem;
+    border-radius: 4px;
+}
+#add_doc .option-p{
+    position: relative;
+    color: white;
+    font-size: 1rem;
+    left: 1rem;
+    width: 100%;
+    font-family: 0.5rem !important;
+    float : none;
+    display: block;
+    margin-top: 0.2rem;
+}
+
+#add_doc .option-btn{
+    position: relative;
+    cursor: pointer;
+    transition: 0.2s;
+    bottom: 2px;
+    height: 1.8rem;
+    width: 3rem;
+    left: 29%;   
+    margin-top: 1rem;
+    /*! transform: translate(-50%,0%); */
+    border-style: none;
+    border-radius: 4px;
+}
+
+#add_doc .option-btn:last-child{
+    background: rgb(245, 120, 120);
+}
+
+#add_doc select{
+    position: absolute;
+    width: 3rem;
+    padding: none;
+    height:  1.5rem;
+    right: 1rem;
+    top: 0.2rem;
+}
+
+.option-foucs{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    background: rgba(53, 22, 45, 0.801);
+    cursor: not-allowed;
+    display : none;
+}
+
+
+
+
+
+
+
+#edit_doc{
+    position: absolute;
+    width: 30%;
+    height: auto;
+    border-radius: 8px;
+    background: #222222eb;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    overflow: hidden;
+    display: none;
+}
+
+#edit_doc .option-inps{
+    position: absolute;
+    display: block;
+    top: 2.5rem;
+    font-size: 1rem;
+    font-family: monoscape;
+    width: 4rem;
+    right: 0.9rem;
+    border-radius: 4px;
+}
+#edit_doc .option-p{
+    position: relative;
+    color: white;
+    font-size: 1rem;
+    left: 1rem;
+    width: 100%;
+    font-family: 0.5rem !important;
+    float : none;
+    display: block;
+    margin-top: 0.2rem;
+}
+
+#edit_doc .option-btn{
+    position: relative;
+    cursor: pointer;
+    transition: 0.2s;
+    bottom: 2px;
+    height: 1.8rem;
+    width: 3rem;
+    left: 29%;   
+    margin-top: 1rem;
+     /*! transform: translate(-50%,0%); */
+    border-style: none;
+    border-radius: 4px;
+}
+
+#edit_doc .option-btn:last-child{
+    background: rgb(245, 120, 120);
+}
+
+#edit_doc select{
+    position: absolute;
+    width: 3rem;
+    padding: none;
+    height:  1.5rem;
+    right: 1rem;
+    top: 0.2rem;
+}
