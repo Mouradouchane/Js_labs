@@ -2,6 +2,7 @@
 @import url("./lab5.css");
 @import url("./lab6.css");
 @import url("./lab7.css");
+@import url("./lab9.css");
 
 html{
     --lightBack : rgb(218, 216, 216);
@@ -25,9 +26,9 @@ h2{
     top: -0.5rem;
     font-family: monospace;
     font-weight: bold;
-    color :rgb(19, 19, 19);
-    background-color:rgb(134, 102, 129);
-    border-bottom: 4px solid rgb(72, 57, 70);
+    color :rgb(232, 85, 85);
+    background-color:rgb(39, 39, 45);
+    border-bottom: 4px solid rgb(232, 85, 85);
     display: inline-block;
     padding : 8px;
     width : 90%;
