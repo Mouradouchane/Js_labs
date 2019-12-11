@@ -27,13 +27,14 @@
     position: relative;
     margin-top: 8px;
     left: 8px; 
-    background: hsl(160, 80%, 24%);
+    background: hsl(0, 76.2%, 62.2%);
     font-family: monospace;
-    color : white;
+    color : #27272d;
     font-size: 1rem;
     border-style: none;
     border-radius: 4px;
     cursor: pointer;
     transition: 0.2s;
+    border: 1px solid #27272d;
 }
 
