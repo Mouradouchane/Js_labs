@@ -18,7 +18,7 @@ function ARRsort(arr = [0]){
     }
 
     // last comparing last sorting
-    for(let p = 0 ; p < Arr.length ; p+=1){
+    for(let p = 0 ; p < Arr.length /2 + 1 ; p+=1){
         for(i = Arr.length ; i >= 0 ; i -= 1){
             f = i-1;
             s = i;
@@ -31,5 +31,9 @@ function ARRsort(arr = [0]){
     return Arr;
 }
 
-var avr =  ARRsort([9,4,7,5,1]);
+
+function ARRsort_Trick(arr = [0]){
+
+}
+var avr =  ARRsort([100,3,50,2,9,45,0,12,1]);
 console.log(avr);
